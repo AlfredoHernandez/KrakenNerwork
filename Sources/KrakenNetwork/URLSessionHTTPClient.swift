@@ -4,15 +4,19 @@
 
 import Foundation
 
+/// A HTTP Client using the `URLSession` Swift's Foundation class
 public class URLSessionHTTPClient: HTTPClient {
     private let session: URLSession
 
-    public init(session: URLSession) {
+    /// - Parameters:
+    ///     - session: The *URLSession* required for the client, by default `URLSession.shared`
+    public init(session: URLSession = .shared) {
         self.session = session
     }
 
     private class UnexpectedValuesRepresentation: Error {}
 
+    /// A Wrapper task, like downloading a specific resource, performed in a URL session.
     private struct URLSessionTaskWrapper: HTTPClientTask {
         let wrapped: URLSessionTask
 
