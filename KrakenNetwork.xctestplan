@@ -1,0 +1,34 @@
+{
+  "configurations" : [
+    {
+      "id" : "8768DC11-F246-42E7-B3E5-94082A53E41E",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:",
+          "identifier" : "KrakenNetwork",
+          "name" : "KrakenNetwork"
+        }
+      ]
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "KrakenNetworkTests",
+        "name" : "KrakenNetworkTests"
+      }
+    }
+  ],
+  "version" : 1
+}

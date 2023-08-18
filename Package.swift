@@ -1,5 +1,4 @@
-// swift-tools-version: 5.7
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version: 5.8
 
 import PackageDescription
 
@@ -14,7 +13,7 @@ let package = Package(
     products: [
         .library(name: "KrakenNetwork", targets: ["KrakenNetwork"]),
     ],
-    dependencies: [ ],
+    dependencies: [],
     targets: [
         .target(name: "KrakenNetwork", dependencies: []),
         .testTarget(name: "KrakenNetworkTests", dependencies: ["KrakenNetwork"]),

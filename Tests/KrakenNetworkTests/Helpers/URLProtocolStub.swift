@@ -1,5 +1,5 @@
 //
-//  Copyright © 2020 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
 //
 
 import Foundation
@@ -26,6 +26,10 @@ final class URLProtocolStub: URLProtocol {
 
     static func observeRequests(observer: @escaping (URLRequest) -> Void) {
         stub = Stub(data: nil, response: nil, error: nil, requestObserver: observer)
+    }
+
+    static func stub(data: Data?, response: URLResponse?, error: Error?, observer: @escaping (URLRequest) -> Void) {
+        stub = Stub(data: data, response: response, error: error, requestObserver: observer)
     }
 
     static func removeStub() {

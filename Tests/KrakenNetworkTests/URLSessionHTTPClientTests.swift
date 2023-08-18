@@ -1,5 +1,9 @@
-import XCTest
+//
+//  Copyright © 2023 Jesús Alfredo Hernández Alarcón. All rights reserved.
+//
+
 @testable import KrakenNetwork
+import XCTest
 
 final class URLSessionHTTPClientTests: XCTestCase {
     override func tearDown() {
@@ -135,13 +139,5 @@ final class URLSessionHTTPClientTests: XCTestCase {
 
         wait(for: [exp], timeout: 1.0)
         return receivedResult
-    }
-
-    private func anyHTTPURLResponse() -> HTTPURLResponse {
-        HTTPURLResponse(url: anyURL(), statusCode: 200, httpVersion: nil, headerFields: nil)!
-    }
-
-    private func nonHTTPURLResponse() -> URLResponse {
-        URLResponse(url: anyURL(), mimeType: nil, expectedContentLength: 0, textEncodingName: nil)
     }
 }
